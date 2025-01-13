@@ -5,63 +5,96 @@
     <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="/static/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-
+    <link href="/static/app/css/style_app.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
-        <section class="container">
-            <div class="logo">
+        <section class="container bg-white p-2">
+            <div class="row">
+            <div class="col-1">
                 <img src="/static/app/img/logo.png" width="75" height="75" alt="Логотип" />
             </div>
-            <div class="label">
-                <b>Каталог радиодеталей</b>
+            <div class="col-11">
+                <h2 class="mb-auto p-3 bd-highlight"><i>Каталог радиодеталей</i></h2>
+            </div>
             </div>
         </section>
-        <section class="container">
-            <nav class="navbar navbar-expand-lg ">
-               <a class="navbar-brand" href="/">Главная</a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-               </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                 <ul class="nav nav-tabs">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Транзисторы</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Диоды</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Микросхемы</a>
-                  </li>
-                 </ul>
+        <section class="container bg-secondary">
+            <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-tabs">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Транзисторы</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Тип1</a></li>
+      <li><a class="dropdown-item" href="#">Тип2</a></li>
+      <li><a class="dropdown-item" href="#">Тип3</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Все типы</a></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Диоды</a>
+    <ul class="dropdown-menu">
+       <li><a class="dropdown-item" href="#">Тип1</a></li>
+      <li><a class="dropdown-item" href="#">Тип2</a></li>
+      <li><a class="dropdown-item" href="#">Тип3</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Все типы</a></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Микросхемы</a>
+    <ul class="dropdown-menu">
+       <li><a class="dropdown-item" href="#">Тип1</a></li>
+      <li><a class="dropdown-item" href="#">Тип2</a></li>
+      <li><a class="dropdown-item" href="#">Тип3</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Все типы</a></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Модули</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Тип1</a></li>
+      <li><a class="dropdown-item" href="#">Тип2</a></li>
+      <li><a class="dropdown-item" href="#">Тип3</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Все типы</a></li>
+    </ul>
+  </li>
+</ul>
 
-               </div>
-            </nav>
+    </div>
+  </div>
+</nav>
         </section>
 
-        <section class="container">
-            {% block left %}
+        <section class="container mt-3">
+            <div class="row">
+                <div class="col-2 bg-light p-3">
+                 {% block left %}
 
-            {% endblock %}
+                 {% endblock %}
+                </div>
+                <div class="col-10 bg-white p-3">
+                    {% block content %}
 
-            <article>
-
-
-                {% block content %}
-
-            <aside>
-
-            </aside>
-                {% endblock %}
-
-            </article>
-
-
+                    {% endblock %}
+                </div>
+            </div>
         </section>
-        <footer class="container">
-             E&F &copy; 2024
-        </footer>
+        <div class="container bg-secondary p-3 mt-3">
+            <div class="row justify-content-center">
+                E&F &copy; 2024
+            </div>
+        </div>
+
 
 
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
