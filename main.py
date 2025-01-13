@@ -17,8 +17,9 @@ from fastapi import FastAPI, Request
 
 
 app = FastAPI()
+
 # app.include_router(transistor_router)
-# app.include_router(task_router)
+
 
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="public"))
